@@ -45,7 +45,7 @@ coef_plot= function(ModelResults, varnames = NULL, data){
 }
 #including all but "(Intercept)"
 #model 1: coef plot
-png("./images/coefm1_lm.png", width=200, height=200)
+png("./writeup/images/coefm1_lm.png", width=200, height=200)
 coef_plot(m1_lm, varnames = "(Intercept)", data = state.panel) + 
        ggtitle("Coefficient Plot(Model 1, OLS)")
 dev.off()
@@ -53,7 +53,7 @@ dev.off()
 # model 4: polity binary
 coef_plot(m2, varnames = "(Intercept)", data = state.panel) + 
        ggtitle("Coefficient Plot(Model 5, Logit)")
-ggsave("./images/coefm1_m2.png",units = "cm",
+ggsave("./writeup/images/coefm1_m2.png",units = "cm",
       width = 10, height = 6 )
 
 
@@ -99,6 +99,6 @@ p <- cluster_densityplot(m2, n.sim = 1000, varname = "polity_dummy", data = stat
 #you can add a title
 p + ggtitle("Density plot for the distribution of regime type")
 ###stata to r
-ggsave("./images/m2_density.png",units = "cm",
+ggsave("./writeup/images/m2_density.png",units = "cm",
        width = 10, height = 6 )
 
