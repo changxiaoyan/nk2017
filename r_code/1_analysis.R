@@ -12,7 +12,7 @@ load("./clean_data/state.panel.RData")
 #ggpairs(state.panel, columns = c("polity2", "pop","gdppc", "gdpgrowth", "miliper",
 #                                 "state_vio", "nonstate_vio", "oneside_vio"))
 ggpairs(state.panel, columns = c("pop","gdppc", "gdpgrowth"))
-ggsave("images/eda.png")
+ggsave("./writeup/images/eda.png")
 
 ##transform var
 
